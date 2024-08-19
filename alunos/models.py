@@ -7,7 +7,7 @@ class dados(models.Model):
     email = models.EmailField()
     cpf = models.IntegerField()
     dn = models.DateField()
-    img = models.ImageField(upload_to="Imagens/", null=True)
+    img = models.ImageField(upload_to="./Imagens/", null=True)
 
     def __str___(self):
         return self.nome
