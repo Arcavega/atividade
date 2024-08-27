@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block conteudo %}
+
+    <p>Formulário</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">submit</button>
+    </form>
+{% endblock %}
