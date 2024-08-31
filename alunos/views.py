@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import dados
+from .models import *
 from .forms import *
 # Create your views here.
 
 def perfil(request, *args, **kwargs):
-    alunos = dados.objects.all()
+    alunos = dados2.objects.all()
     context = {
-        'dados': alunos
+        'dados2': alunos
     }
     return render(request, "dados.html", context=context)
 

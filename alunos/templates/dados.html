@@ -1,9 +1,12 @@
 {% extends 'index.html' %}
 {% block conteudo %}
-    {% for aluno in dados%}
+    {% for aluno in dados2%}
         <p>Aluno: {{ aluno.nome }}</p>
         <p>Email: {{ aluno.email }}</p>
-        <p>Data de Nascimento: {{ aluno.dn }}</p>
-        <img src="{{ dados.img.url }}" alt="{{ dados.nome }}">
+        <p>Curso: {{aluno.curso}}</p>
+        <p>Cidade: {{aluno.cidade}}</p>
+        <p>Endereço: {{aluno.endereço}}</p>
+
+        <img src="{{ dados1.img.url }}" alt="{{ dados1.nome }}">
     {% endfor %}
 {% endblock %}
