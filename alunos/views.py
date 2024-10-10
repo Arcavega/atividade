@@ -24,3 +24,9 @@ def cadastro(request):
         'form': form
     }
     return render(request, 'forms.html', context)
+
+def inicio(request):
+    return render(request, 'inicio.html')
+
+def cadastro2(request):
+    return render(request, 'template/cadastro/index.html')
