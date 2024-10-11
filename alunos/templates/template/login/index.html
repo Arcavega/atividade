@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename=
+    'login/css/style.css') }}">
+    <title>HPWEB - Login</title>
+</head>
+<body>
+    <header>
+        <p>HP-WEB</p>
+    </header>
+
+    <main>
+        <div id="conteudo">
+            <div id="part1">
+                <h2>BEM-VINDO(A)</h2>
+                
+                <div>
+                    <p>Sua fonte confiável para informações essenciais sobre a saúde.</p>
+                </div>
+
+                <div><img src="{{ url_for('static', filename=
+                    'login/img/HPWebCortado.png') }}" alt=""></div>
+            </div>
+
+            <div id="login">
+                <div class="box">
+                    <form action="/token" id="formId" method="post">
+                        <fieldset>
+                            <legend><strong>Login</strong></legend>
+                            <br>
+                            <div class="inputBox">
+                                <input type="email" name="email" id="email" class="inputUser" required>
+                                <label for="email" class="labelInput">Email</label>
+                            </div>
+            
+                            <div class="inputBox">
+                                <input type="password" name="senha" id="senha" class="inputUser" required>
+                                <label for="senha" class="labelInput">Senha</label>
+                            </div>
+            
+                            <button type="submit" name="submit" id="submit">Enviar</button>
+                            <p id="mensError">{{ posts }}</p>
+                            <p id="linkCadastro"><a href="http://127.0.0.1:8080/cadastro">Não possui conta? Cadastre-se</a></p>
+                            <p id="linkCadastro"><a href="http://127.0.0.1:8080/trocaSenha">Redefinir senha</a></p>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

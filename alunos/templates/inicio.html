@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+{% load static %}
+    <main>
+        <div id="welcome">
+            <img src="{% static 'inicio/img/Hospital3.png' %}" alt="">
+        </div>
+        <div id="maior">
+            <div>
+                <p id="absol">Alexandria</p>
+                <img src="{% static 'inicio/img/Hospital1.png' %}" alt="" id="imgMaior">
+                <h2 class="above" id="noti"><span class="tema">Notícias:</span><a href="http://127.0.0.1:8080/notiJanela" class="whiteText">Aumento dos casos de virose no Alto Oeste assusta moradores.</a></h2>
+            </div>
+        
+            <div id="menores">
+                <div>
+                    <img src="{% static 'inicio/img/image 3.png' %}" alt="" class="imgMenor">
+                    <h2 class="above" id="ab1"><span class="tema">Mapa</span><a href="http://127.0.0.1:8080/mapa" class="whiteText" id="menos">Veja a situação da Nasofaringite em Pereiro</a></h2>
+                </div>
+                
+                <div>
+                    <img src="{% static 'inicio/img/image 2.png' %}" alt="" class="imgMenor">
+                    <h2 class="above" id="ab2"><span class="tema">Catálogo de Doenças</span><a href="http://127.0.0.1:8080/catJanela" class="whiteText">Influenza</a></h2>
+                </div>
+            </div>       
+        </div>
+
+        <div id="carouselExampleCaptions" class="carousel slide w-11/12">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner w-11/12">
+              <div class="carousel-item active w-11/12">
+                <img src="{% static 'inicio/img/sala_m.png' %}" class="d-block w-11/12 m-auto carImg" alt="...">
+                <div class="carousel-caption">
+                  <h5><a href="http://127.0.0.1:8080/notiJanela" class="branco"><span class="branco">Notícias</span></a></h5>
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'inicio/img/mapa_m.png' %}" class="d-block w-11/12 m-auto carImg" alt="...">
+                <div class="carousel-caption">
+                  <h5><a href="http://127.0.0.1:8080/mapa" class="branco"><span class="branco">Mapa</span></a></h5>
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'inicio/img/virus_m.png' %}" class="d-block w-11/12 m-auto carImg" alt="...">
+                <div class="carousel-caption">
+                  <h5><a href="http://127.0.0.1:8080/catJanela" class="branco"><span class="branco">Catálogo</span></a></h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            
+        <div id="forYou">
+            <h3>Para você:</h3>
+            <a href="http://127.0.0.1:8080/notiJanela" id="mN">Todas as notícias ></a>
+        </div>
+        <div class="flex-container">
+            <div>
+                <p>Alexandria</p>
+                <img src="{% static 'inicio/img/08 06 2020 Posto de Saúde Odorico de Morais IMG_4939 1.png' %}" alt="">
+                <p>Veja os relatórios epidemiológicos do mês de Maio, clique aqui.</p>
+            </div>
+            <div>
+                <p>Alexandria</p>
+                <img src="{% static 'inicio/img/image 3.png' %}" alt="">
+                <p>Aumento dos casos de virose no Alto Oeste assusta moradores.</p>
+            </div>
+            <div>
+                <p>Alexandria</p>
+                <img src="{% static 'inicio/img/images 1.png' %}" alt="">
+                <p>Doenças de inverno, saiba como se prevenir.</p>
+            </div>
+
+            <a href="http://127.0.0.1:8080/notiJanela" id="moreNews"> Todas as notícias ></a>
+        </div>
+       
+    </main>
+{% endblock %}

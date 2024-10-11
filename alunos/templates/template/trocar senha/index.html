@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename=
+    'trocar senha/css/style.css') }}">
+    <title>Mudar Senha</title>
+</head>
+<body>
+    <header>
+        <p>HP-WEB</p>
+    </header>
+
+    <main>
+        <div id="conteudo">
+            <div id="part1">
+                <h2>BEM-VINDO(A)</h2>
+                
+                <div>
+                    <p>Sua fonte confiável para informações essenciais sobre a saúde.</p>
+                </div>
+
+                <div><img src="{{ url_for('static', filename=
+                    'trocar senha/img/HPWebCortado.png') }}" alt=""></div>
+            </div>
+
+            <div id="login">
+                <div class="box">
+                    <form action="/token2" id="formID" method="post">
+                        <fieldset>
+                            <legend><strong>Trocar Senha</strong></legend>
+                            <br>
+                            <div class="inputBox">
+                                <input type="email" name="email" id="email" class="inputUser" required>
+                                <label for="email" class="labelInput">Email</label>
+                            </div>
+
+                            <div class="inputBox">
+                                <input type="text" name="frase" id="frase" class="inputUser" required>
+                                <label for="frase" class="labelInput">Frase de apoio</label>
+                            </div>
+            
+                            <div class="inputBox">
+                                <input type="password" name="nova_senha" id="nova_senha" class="inputUser" required>
+                                <label for="nova_senha" class="labelInput">Nova senha</label>
+                            </div>
+            
+                            <button type="submit" name="submit" id="submit">Trocar</button>
+                            <p id="mensError">{{ posts }}</p>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

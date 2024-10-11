@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename=
+    'mapa/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body id="bodyId">
+    <header>
+        <div>
+            <h1><a href="http://127.0.0.1:8080/inicior"><img src="{{ url_for('static', filename=
+                'inicio/img/HPWeb (3).png')}}" alt="" class="logo"></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="http://127.0.0.1:8080/notiJanela">Notícias</a></li>
+                    <li><a href="http://127.0.0.1:8080/mapa" class="own">Mapa</a></li>
+                    <li><a href="http://127.0.0.1:8080/catJanela">Catálogo</a></li>
+                    <li><a href="http://127.0.0.1:8080/sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="divUser">
+            <button class="btnUser" onclick="menuUserShow()">{{ posts[1][0] }}</button>
+                <ul id="userMenu">
+                    <li><a href="http://127.0.0.1:8080/">Logout</a></li>
+                    <li><a href="http://127.0.0.1:8080/trocaSenha">Trocar senha</a></li>
+                </ul>
+            <img src="{{ url_for('static', filename=
+            'inicio/img/anonimo(2).png')}}" alt="" id="user">
+        </div>
+        <button id="btnBar" onclick="menuShow()"><img src="{{ url_for('static', filename=
+            'inicio/img/barras.png')}}" alt="" id="barras"></button>
+    </header>
+
+    <div id="mobileMenu">
+        <ul id="ulMobile">
+            <li><a href="http://127.0.0.1:8080/notiJanela">Notícias</a></li>
+            <li><a href="http://127.0.0.1:8080/mapa" class="own">Mapa</a></li>
+            <li><a href="http://127.0.0.1:8080/catJanela">Catálogo</a></li>
+            <li><a href="http://127.0.0.1:8080/sobre">Sobre</a></li>
+        </ul>
+        <div id="mobileUser">
+            <img src="{{ url_for('static', filename=
+            'inicio/img/anonimo(2).png')}}" alt="" height="70px">
+            <button class="btnUserMenu" onclick="menuUserShow1()">{{ posts[1][0] }}</button>
+        </div>
+        <ul id="ulMobileUser">
+            <li><a href="http://127.0.0.1:8080/">Logout</a></li>
+            <li><a href="http://127.0.0.1:8080/trocaSenha">Trocar senha</a></li>
+        </ul>
+        
+    </div>
+
+    <main>
+        <section id="choice">
+            <div id="display">
+                <select name="city" id="city">
+                    <option value="" selected disabled> Selecione a cidade</option>
+                    <option value="AL">Alexandria-RN</option>
+                    <option value="PF">Pau dos Ferros-RN</option>
+                    <option value="PE">Pereiro-CE</option>
+                </select>
+                <img src="{{ url_for('static', filename='mapa/img/Seta.png')}}" alt="seta" id="seta">
+            </div>
+            <div id="buttons">
+                <button id="primeiro" class="btn">Influenza</button>
+                <button id="segundo" class="btn">Gastroenterite</button>
+                <button id="terceiro" class="btn">Nasofaringite aguda</button>
+            </div>
+        </section>
+
+        <section id="quadros">
+            <div id="legenda">
+                <p id="totalI">Total de infectados:</p>
+                <p id="maiorOc">Estabelecimento com maior ocorrência:</p>
+                <p>Informações adicionais - <a href="#" id="linkAdd"></a></p>
+            </div>
+            <div class="mapa">
+                <img src="{{ url_for('static', filename='mapa/img/Branco.png')}}" alt="imagem" id="imagem" class="mapa">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="abstract">
+            <h1><img src="{{ url_for('static', filename=
+                'mapa/img/HPWeb (3).png')}}" alt="" class="logo"></h1>
+            <h1>HP WEB</h1>
+            <p>Planejado com o intuito de disseminar informações confiáveis sobre a saúde em suas respectivas cidades (Pau dos Ferros - RN, Alexandria - RN e Pereiro - CE). Nosso objetivo primordial é fomentar a propagação de fatos verídicos e facilitar o acesso a essas informações.</p>
+        </div>
+
+        <div id="contact">
+            <div id="help">
+                <h2>SUPORTE</h2>
+                <ul id="ajuda">
+                    <li><a href="">Informações da empresa</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Telefone</a></li>
+                    <li><a href="">Chat</a></li>
+                </ul>
+            </div>
+            <div id="logos">
+                <img src="{{ url_for('static', filename=
+                'mapa/img/twitter.png')}}" alt="twitter" >
+                <img src="{{ url_for('static', filename=
+                'mapa/img/instagram(1).png')}}" alt="instagram" id="insta">
+                <img src="{{ url_for('static', filename=
+                'mapa/img/facebook.png')}}" alt="facebook">
+                <img src="{{ url_for('static', filename=
+                'mapa/img/discord.png')}}" alt="discord">
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename=
+'mapa/js/scripts.js') }}"></script>
+</html>

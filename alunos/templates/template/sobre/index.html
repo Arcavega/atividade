@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sobre/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body id="bodyId">
+    <header>
+        <div>
+            <h1><a href="http://127.0.0.1:8080/inicior"><img src="{{ url_for('static', filename='sobre/img/HPWeb (3).png')}}" alt="" class="logo"></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="http://127.0.0.1:8080/notiJanela" >Notícias</a></li>
+                    <li><a href="http://127.0.0.1:8080/mapa">Mapa</a></li>
+                    <li><a href="http://127.0.0.1:8080/catJanela">Catálogo</a></li>
+                    <li><a href="http://127.0.0.1:8080/sobre" class="own">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="divUser">
+            <button class="btnUser" onclick="menuUserShow()">{{ posts[1][0] }}</button>
+                <ul id="userMenu">
+                    <li><a href="http://127.0.0.1:8080/">Logout</a></li>
+                    <li><a href="http://127.0.0.1:8080/trocaSenha">Trocar senha</a></li>
+                </ul>
+            <img src="{{ url_for('static', filename='sobre/img/anonimo(2).png')}}" alt="" id="user">
+        </div>
+        <button id="btnBar" onclick="menuShow()"><img src="{{ url_for('static', filename='sobre/img/barras.png')}}" alt="" id="barras"></button>
+    </header>
+
+    <div id="mobileMenu">
+        <ul id="ulMobile">
+            <li><a href="http://127.0.0.1:8080/notiJanela" >Notícias</a></li>
+            <li><a href="http://127.0.0.1:8080/mapa">Mapa</a></li>
+            <li><a href="http://127.0.0.1:8080/catJanela">Catálogo</a></li>
+            <li><a href="http://127.0.0.1:8080/sobre" class="own">Sobre</a></li>
+        </ul>
+        <div id="mobileUser">
+            <img src="{{ url_for('static', filename='sobre/img/anonimo(2).png')}}" alt="" height="70px">
+            <button class="btnUserMenu" onclick="menuUserShow1()">{{ posts[1][0] }}</button>
+        </div>
+        <ul id="ulMobileUser">
+            <li><a href="http://127.0.0.1:8080/">Logout</a></li>
+            <li><a href="http://127.0.0.1:8080/trocaSenha">Trocar senha</a></li>
+        </ul>
+        
+    </div>
+
+    <main>
+        <section>
+            <h1>SOBRE NÓS</h1>
+            <div id="line"></div>
+            <div class="text">
+                <p>O HPWeb dispõe do apoio de vários estabelecimentos médicos municipais, das cidades de Alexandria - RN, Pau dos Ferros - RN e Pereiro - CE, e de uma equipe jornalística profissional para trazer informações verídicas ao povo do Alto Oeste.</p>
+                <p>Somos um grupo de desenvolvedores e pesquisadores que querem assegurar o mínimo de acesso à saúde para o povo brasileiro. Desfrutamos desse site para garantir o acesso a fatos confiáveis e uma visão geral da situação médica do município do usuário</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>CRIADORES:</h2>
+
+            <div id="purple" class="adm">
+                <img src="{{ url_for('static', filename='sobre/img/Ariel.jpeg')}}" alt="">
+                <div class="text">
+                    <h3>Ariel Carlos</h3>
+                    <p>Meu nome é Ariel. Sou natural de Mossoró, mas me mudei para Alexandria há 5 anos atrás. Estou cursando o 3° ano de informática no Instituto Federal de Pau dos Ferros e procuro aprender bastante sobre as áreas relacionadas à informática, sejam físicas ou virtuais. Por mais que eu goste de informática, minha área de interesse está relacionada à língua inglesa e também a leituras relacionadas a teologia. Estou me esforçando para que num futuro próximo eu possa trabalhar em uma área que envolva tecnologia e inglês.</p>
+                </div>
+            </div>
+
+            <div id="blue" class="adm">
+                <img src="{{ url_for('static', filename='sobre/img/Ítalo.jpeg')}}" alt="">
+                <div class="text">
+                    <h3>Ítalo Guilherme</h3>
+                    <p>Me chamo Ítalo Guilherme Barros da Silva, mas conhecido como Ítalo, nasci em Natal mas moro desde criança em Pau dos Ferros. Tenho 16 anos, e atualmente estudo no IFRN - Campus Pau dos Ferros onde estou cursando a 3° série do ensino médio no curso de informática. Gosto da área do curso de informática e pretendo em seguir na área.</p>
+                </div>
+            </div>
+
+            <div id="white" class="adm">
+                <img src="{{ url_for('static', filename='sobre/img/José.jpg')}}" alt="">
+                <div class="text">
+                    <h3>José Cavalcante</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsam similique explicabo porro cum totam rerum ipsum quidem tenetur quas, maxime quibusdam obcaecati dicta, sequi ratione deserunt? Accusamus, pariatur tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aspernatur magnam officiis voluptates sint consectetur? </p>
+                </div>
+            </div>
+
+            <div id="red" class="adm">
+                <img src="{{ url_for('static', filename='sobre/img/Sávio.jpeg')}}" alt="">
+                <div class="text">
+                    <h3>Sávio Rodrigues</h3>
+                    <p>Sou Sávio Rodrigues Viana, mais conhecido como Little Black. Nasci em São Paulo e estou morando atualmente no Rio Grande do Norte. Sou um dos alunos de informática do 3 ano Campus Pau dos Ferros. Pretendo continuar com o curso e se especializar na área Front-End. Sou um homem negro, solteiro, gostoso, conservador, jogador de League of Legends e sem vida social. Procuro uma mulher que sabe seus valores para montar uma família "Red Pillada". Odeio Normies e Betas. Fiz meu primeiro 1 milhão com ajuda da Blaze, junto com o jogo do Tigrinho. Tenho um sonho de ser um grande programador de sucesso ou ser um grande streamer da Twich.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div id="abstract">
+            <h1><img src="{{ url_for('static', filename='sobre/img/HPWeb (3).png')}}" alt="" class="logo"></h1>
+            <h1>HP WEB</h1>
+            <p>Planejado com o intuito de disseminar informações confiáveis sobre a saúde em suas respectivas cidades (Pau dos Ferros - RN, Alexandria - RN e Pereiro - CE). Nosso objetivo primordial é fomentar a propagação de fatos verídicos e facilitar o acesso a essas informações.</p>
+        </div>
+
+        <div id="contact">
+            <div id="help">
+                <h2>SUPORTE</h2>
+                <ul id="ajuda">
+                    <li><a href="">Informações da empresa</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Telefone</a></li>
+                    <li><a href="">Chat</a></li>
+                </ul>
+            </div>
+            <div id="logos">
+                <img src="{{ url_for('static', filename='sobre/img/twitter.png')}}" alt="twitter" >
+                <img src="{{ url_for('static', filename='sobre/img/instagram(1).png')}}" alt="instagram" id="insta">
+                <img src="{{ url_for('static', filename='sobre/img/facebook.png')}}" alt="facebook">
+                <img src="{{ url_for('static', filename='sobre/img/discord.png')}}" alt="discord">
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='sobre/js/scripts.js') }}"></script>
+</html>

@@ -1,0 +1,210 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    color: #FFFFFF;
+    height: 5rem;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #176C10, #41A339);
+}
+
+#mensError{
+    color: red;
+    text-align: center;
+}
+
+header p{
+    font-size: 70px;
+    margin-left: 10px;
+}
+
+h3{
+    font-family:'Courier New', Courier, monospace;
+}
+
+#conteudo{
+    display: flex;
+}
+
+#part1{
+    background-color: #176C10;
+    width: 40%;
+    padding: 0 4rem 0 4rem 0;
+    text-align: center;
+    height: 100vh;
+}
+
+main{
+    min-height: 80vh;
+}
+
+main h2{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 60px;
+    color: #FFFFFF;
+}
+
+#part1 p{
+    margin: auto;
+    margin-bottom: 4rem;
+    width: 60%;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+img{
+    width: 70%;
+}
+
+
+#btn1{
+    width: 50%;
+    height: 5rem;
+    padding: 0rem 1rem 0rem 1rem;
+    border: solid #0B4F06 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #0C9600;
+    font-size: 2rem;
+    display: block;
+    margin: auto;
+}
+
+#login{
+    width: 60%;
+    align-self: center;
+}
+
+.box{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset{
+    border: 0.25rem solid green;
+    padding: 0.5rem;
+    
+}
+
+legend{
+    border: 1px solid green;
+    padding: 0.8rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.inputBox{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#fem{
+    margin-bottom: 0.1rem;
+}
+
+.inputUser:focus ~ .labelInput, .inputUser:valid ~ .labelInput{
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: darkgreen;
+
+}
+
+#inputDate{
+    margin-top: 1rem;
+}
+
+#nascimento{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+#submit{
+    background-image: linear-gradient(to top, rgb(0, 200, 0), rgb(0, 80, 0));
+    width: 80%;
+    border: none;
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    margin: auto;
+    display: block;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to top, rgb(0, 160, 0), rgb(0, 40, 0));  
+}
+
+#linkCadastro{
+    margin-top: 0.5rem;
+    color: #41A339;
+    text-align: center;
+}
+
+#linkCadastro a{
+    color: #41A339;
+}
+
+@media(max-width: 900px) {
+    #conteudo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #part1{
+        width: 100%;
+        height: 46rem;
+    }
+
+    #part1 h2{
+        margin-top: 7rem;
+        font-size: 50px;
+    }
+
+    #login{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .box{
+        width: 90%;
+        margin-bottom: 5rem;
+    }
+
+    #submit{
+        width: 75%;
+    }
+}

@@ -1,0 +1,476 @@
+@charset "UTF-8";
+
+:root{
+    --Verde_escuro: #55864F;
+    --Verde_claro: #65AF60;
+}
+
+*{
+    margin: 0rem;
+    padding: 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    height: 5rem;
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--Verde_escuro), var(--Verde_claro));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobileMenu{
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+    display: none;
+    height: 0px;
+    padding: 0;
+}
+
+header > div{
+    display: flex;
+
+}
+
+header > div > h1{
+    display: inline;
+    padding-left: 0.625rem;
+}
+
+img.logo{
+    width: 6rem;
+}
+
+header > div > nav{
+    display: inline;
+    align-self: flex-end;
+}
+
+header > div > nav > ul{
+    display: inline;
+    width: 50rem;
+    padding-left: 4.5rem;
+}
+
+header > div > nav > ul > li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 3.7rem;
+}
+
+header > div > nav > ul > li > a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+header  img{
+    width: 5rem;
+    padding-right: 0.625rem;
+}
+
+.btnUser{
+    background-color: transparent;
+    border: none;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnUserMenu{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#divUser{
+    position: relative;
+}
+
+#userMenu{
+    list-style-type: none;
+    padding: 0 1rem 0.5rem 1rem;
+    visibility: hidden;
+    overflow-y: hidden;
+    height: 0px;
+    border-radius: 0 0 5px 5px;
+    transition: .2s;
+    background-image: linear-gradient(to bottom, var(--Verde_claro), var(--Verde_escuro));
+    position: absolute;
+    top: 4.71rem;
+}
+
+#userMenu li a{
+    color: white;
+    text-decoration: none;
+}
+
+#userMenu li a:hover{
+    text-decoration: underline;
+}
+
+#btnBar{
+    display: none;
+    background-color: transparent;
+    border: none;
+    margin-right: 1rem;
+}
+
+#barras{
+    width: 4rem;
+    display: none;
+}
+
+
+
+footer{
+    background-image: linear-gradient(to bottom, var(--Verde_claro), var(--Verde_escuro));
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div > h1{
+    display: inline;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(42, 40, 40);
+    margin-left: 0.625rem;
+}
+
+footer > div > p{
+    width: 30rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    text-align: justify;
+    color: white;
+}
+
+footer > div > div > h2{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer > div > div > ul{
+    list-style-position: inside;
+    list-style-type: none;
+    columns: 2;
+    width: 100%;
+}
+
+footer > div > div > ul > li{
+    padding: 2px;
+}
+
+footer > div > div > ul > li > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(42, 40, 40);
+}
+
+footer > div > div > ul > li > a:hover{
+    text-decoration: underline;
+}
+
+footer > div#abstract{
+    padding: 10px;
+}
+
+footer > div#contact{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+footer > div > div#help{
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+footer > div > div#logos{
+    background-color: green;
+    border-top-left-radius: 5px;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 51px;
+    align-self: flex-end;
+}
+
+footer > div > div > img{
+    width: 50px;
+}
+
+footer > div > div > img#insta{
+    width: 35px;
+}
+
+.branco{
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.105);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+
+@media (max-width: 1055px) {    
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    #nav{
+        display: none;
+    }
+
+    #user{
+        display: none;
+    }
+
+    .btnUser{
+        display: none;
+    }
+
+    #userMenu{
+        display: none;
+    }
+
+    #barras{
+        display: block;
+        cursor: pointer;
+    }
+
+    #btnBar{
+        display: block;
+    }
+
+    #mobileMenu{
+        background-image: linear-gradient(to bottom, var(--Verde_claro), var(--Verde_escuro));
+        display: block;
+        position: relative;
+    }
+
+    #ulMobile{
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #ulMobile li a{
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+
+    #mobileUser{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #ulMobileUser{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+        position: absolute;
+        left: 52.5%;
+        top: 88%;
+        height: 0px;
+        transition: .2s;
+    }
+
+
+    #ulMobileUser li a{
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    #ulMobileUser li a:hover{
+        text-decoration: underline;
+    }
+    
+    footer{
+        flex-direction: column;
+    }
+
+    #help{
+        margin-left: 1.5rem;
+    }
+    
+    footer > div > p{
+        width: 25rem;        
+        margin-left: 1rem;
+    }
+    
+    footer > div > div > ul{
+        columns: unset;
+    }
+}
+
+
+
+main{
+    margin-bottom: 1rem;
+    background-color: var(--Cor_Fundo);
+    padding-top: 6rem;
+}
+
+main > section > h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0.625rem;
+}
+
+main > section > div#line{
+    width: 33rem;
+    border-top: 0.3125rem solid black;
+    margin: auto; 
+
+}
+
+main > section > div.text{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+main > section > div.text > p{
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+main > section > h2{
+    font-size: 3.5rem;
+    margin: 6.5rem 0rem 2rem 1rem;
+}
+
+main > section > div.adm{
+    max-width: 100%;
+    min-height: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+main > section > div#purple{
+    background-color: #C5AFE9;
+}
+
+main > section > div#blue{
+ background-color: #A8BBD6;
+}
+
+main > section > div#white{
+    background-color: white;
+}
+
+main > section > div#red{
+    background-color: #FF6F6F;
+}
+
+main > section > div.adm > img{
+    max-width: 23rem;
+    max-height: 23rem;
+    border-radius: 100%;
+}
+
+.own{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main{
+    min-height: 80vh;
+}
+
+main > section > div.adm > div.text > h3{
+    font-size: 4rem;
+    margin-bottom: 0.9rem;
+}
+
+main > section > div.adm > div.text > p{
+    font-size: 1.5rem;
+    text-align: justify;
+    max-width: 40rem;
+}
+
+@media (max-width: 935px) {
+    
+    main > section > div.adm{
+        height: auto;
+        padding: 2rem 0;
+        flex-direction: column;
+    }
+
+    main > section > div.adm > div.text > h3{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    main > section > div.adm > div.text > p{
+        padding: 0 2rem;
+        font-size: 1.2rem;
+    }
+
+    main > section > div.adm > img{
+        max-width: 20rem;
+        max-height: 20rem;
+    }
+}
+
+@media (max-width: 750px) {
+    main > section > div.text{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 0;
+        margin: auto;
+        margin-top: 4rem;
+    }
+
+    main > section > div.text > p{
+        width: 90%;
+    }
+
+    main > section > div#line{
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    #abstract > h1{
+        font-size: 1.5rem;
+
+    }
+    #abstract > p{
+        width: 80%;
+    }
+}
