@@ -25,7 +25,8 @@ urlpatterns = [
     path('', cadastro, name='cadastro'),
     path('alunos/', perfil, name='dados'),
     path('inicio/', inicio),
-    path('cadastro/', cadastro2)
+    path('cadastro/', cadastro2),
+    path('catag', catag),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

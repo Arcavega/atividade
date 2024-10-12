@@ -30,3 +30,6 @@ def inicio(request):
 
 def cadastro2(request):
     return render(request, 'template/cadastro/index.html')
+
+def catag(request):
+    return render(request, 'template/catag_janela/index.html')
