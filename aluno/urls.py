@@ -22,11 +22,7 @@ from alunos.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', cadastro, name='cadastro'),
-    path('alunos/', perfil, name='dados'),
-    path('inicio/', inicio),
-    path('cadastro/', cadastro2),
-    path('catag', catag),
+    path('', inicio),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
